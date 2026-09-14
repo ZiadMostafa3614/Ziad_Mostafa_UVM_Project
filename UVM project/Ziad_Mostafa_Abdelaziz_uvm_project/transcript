@@ -1,0 +1,362 @@
+# do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 05:16:02 on Sep 08,2026
+# vlog "+cover=bcesft" axi_memory.v axi4.v 
+# -- Compiling module axi4_memory
+# -- Compiling module axi4
+# ** Warning: axi4.v(177): (vlog-2701) Ignoring coverage pragma: syntax error.
+# ** Warning: axi4.v(251): (vlog-2701) Ignoring coverage pragma: syntax error.
+# 
+# Top level modules:
+# 	axi4
+# End time: 05:16:02 on Sep 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 05:16:02 on Sep 08,2026
+# vlog -sv "+cover=bcesft" "+incdir+." "+incdir+C:/questasim64_2021.1/verilog_src/uvm-1.1d/src" C:/questasim64_2021.1/verilog_src/uvm-1.1d/src/uvm_pkg.sv axi4_if.sv axi4_assertions.sv axi_uvm_pkg.sv top.sv 
+# -- Compiling package uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling interface axi4_if
+# -- Compiling module axi4_checker
+# -- Compiling package axi_uvm_pkg
+# -- Importing package uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling package top_sv_unit
+# -- Importing package axi_uvm_pkg
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 05:16:03 on Sep 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 05:16:04 on Sep 08,2026
+# vopt top -o top_opt "+acc" "+cover=bcesft" -suppress 3009 -work work 
+# 
+# Top level modules:
+# 	top
+# 
+# Analyzing design...
+# -- Loading module top
+# -- Loading interface axi4_if
+# -- Loading module axi4
+# -- Loading module axi4_memory
+# -- Loading module axi4_checker
+# ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
+# Incremental compilation check found 8 design-units (out of 9) may be reused.
+# Optimizing 1 design-unit (inlining 0/5 module instances):
+# -- Optimizing module axi4(fast)
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi4(fast)".
+# Optimized design name is top_opt
+# End time: 05:16:05 on Sep 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# vsim top_opt -coverage -assertdebug "+UVM_TESTNAME=axi_random_test" -suppress 3009 -sv_lib C:/questasim64_2021.1/uvm-1.1d/win64/uvm_dpi -onfinish stop 
+# Start time: 05:16:05 on Sep 08,2026
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading sv_std.std
+# Loading work.axi4_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.axi_uvm_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.axi4_if(fast__2)
+# Loading work.axi4(fast)
+# Loading work.axi4_memory(fast)
+# Loading work.axi4_checker(fast)
+# Loading C:/questasim64_2021.1/uvm-1.1d/win64/uvm_dpi.dll
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_random_test...
+# UVM_INFO axi_tests.sv(24) @ 0: uvm_test_top [TEST_TOPOLOGY] Displaying UVM Test Environment Topology:
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 axi_random_test         -     @448 
+#   env                        axi_env                 -     @456 
+#     axi_agent                axi_active_agent        -     @464 
+#       drv                    axi_driver              -     @655 
+#         rsp_port             uvm_analysis_port       -     @672 
+#         seq_item_port        uvm_seq_item_pull_port  -     @663 
+#       mon                    axi_monitor             -     @515 
+#         item_collected_port  uvm_analysis_port       -     @523 
+#       sqr                    uvm_sequencer           -     @532 
+#         rsp_export           uvm_analysis_export     -     @540 
+#         seq_item_export      uvm_seq_item_pull_imp   -     @646 
+#         arbitration_queue    array                   0     -    
+#         lock_queue           array                   0     -    
+#         num_last_reqs        integral                32    'd1  
+#         num_last_rsps        integral                32    'd1  
+#     cov                      axi_coverage            -     @497 
+#       analysis_imp           uvm_analysis_imp        -     @505 
+#     mem_agent                mem_passive_agent       -     @472 
+#       chk                    mem_checker             -     @723 
+#         analysis_imp         uvm_analysis_imp        -     @731 
+#       cov                    mem_coverage            -     @706 
+#         analysis_imp         uvm_analysis_imp        -     @714 
+#       mon                    mem_monitor             -     @689 
+#         mem_ap               uvm_analysis_port       -     @697 
+#     sb                       axi_scoreboard          -     @480 
+#       item_collected_export  uvm_analysis_imp        -     @488 
+# ----------------------------------------------------------------
+# 
+# UVM_INFO axi_tests.sv(41) @ 0: uvm_test_top [TEST] Executing Constrained-Random Single-Beat AXI Test
+# UVM_INFO top.sv(59) @ 50000: reporter [TOP] System Reset Released.
+# UVM_INFO axi_monitor.sv(55) @ 85000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x10 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 125000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x10 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 165000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x14 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 205000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x14 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 245000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x18 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 285000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x18 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 335000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x20 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 385000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x20 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 435000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x40 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 485000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x40 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 535000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x80 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 585000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x80 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 635000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x100 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 685000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x100 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 735000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x200 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 785000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x200 len=1 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 825000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 865000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x2 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 905000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x3 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 945000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 985000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x2 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 1025000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x3 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 1065000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x2000 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 1105000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x2000 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 1145000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x4000 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 1185000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x4000 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 1225000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x8000 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 1265000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x8000 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 1305000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xfffc len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 1345000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xfffc len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 3935000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x0 len=255 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 6525000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x0 len=255 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 8965000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x400 len=240 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 11405000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x400 len=240 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 11515000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xff0 len=7 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 11625000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xff0 len=7 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 11675000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xffc len=1 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 11725000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xffc len=1 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 11805000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x300 len=3 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 11865000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x400 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 11955000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x500 len=3 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 12015000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x300 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 12105000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x400 len=3 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 12145000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xf80 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 12185000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x163c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 12225000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x208 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 12265000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1adc len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 12305000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xbec len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12345000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1150 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 12385000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x670 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12425000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x18e8 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 12465000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x7c0 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 12505000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x55c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12545000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1520 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 12585000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x11b4 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 12625000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xff0 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12665000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x4c0 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12705000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x468 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12745000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xa0 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12785000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1300 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 12825000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x11a0 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 12865000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x330 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12905000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x30c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 12945000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1688 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 12985000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x5e4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 13025000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xb64 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 13065000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xd70 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 13105000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1384 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 13145000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1378 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 13185000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1f9c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 13225000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1868 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 13265000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x18cc len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 13305000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x174c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 13345000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1df8 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 13385000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x9a4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 13425000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x454 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 13465000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x2f0 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 13505000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1478 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 13545000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x159c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 13585000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xafc len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 13625000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x958 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 13665000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x94 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 13705000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x674 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 13745000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x530 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 13785000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xe04 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 13825000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1b14 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 13865000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x182c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 13905000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1fcc len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 13945000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x848 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 13985000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1114 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 14025000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x12d8 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 14065000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x718 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 14105000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xc98 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 14145000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x5c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 14185000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1230 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 14225000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x80c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 14265000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x9dc len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 14305000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x17f0 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 14345000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1864 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 14385000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x11ec len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 14425000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1e8c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 14465000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1e48 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 14505000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x8e0 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 14545000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x920 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 14585000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x4b4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 14625000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xf28 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 14665000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x3c4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 14705000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1f84 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 14745000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1250 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 14785000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x18a4 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 14825000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1140 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 14865000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x8ec len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 14905000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x20 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 14945000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x195c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 14985000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1860 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 15025000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1728 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 15065000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xd60 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 15105000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x86c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 15145000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1a40 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 15185000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xc60 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 15225000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1bc len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 15265000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x11ec len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 15305000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x394 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 15345000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xc30 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 15385000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1c64 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 15425000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x17f4 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 15465000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1128 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 15505000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1810 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 15545000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xe90 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 15585000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1750 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 15625000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1548 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 15665000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1710 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 15705000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x82c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 15745000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x9ac len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 15785000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1dc8 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 15825000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1714 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 15865000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x82c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 15905000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1a0c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 15945000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x9c4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 15985000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x810 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 16025000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x11dc len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 16065000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x194 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 16105000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x155c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 16145000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x117c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 16185000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xb50 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 16225000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x488 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 16265000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1088 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 16305000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xd24 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 16345000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1058 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 16385000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x13fc len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 16425000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xa34 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 16465000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x218 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 16505000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x14f8 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 16545000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x788 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 16585000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xe6c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 16625000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x454 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 16665000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x9a4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 16705000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1bb8 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 16745000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1a30 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 16785000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1b34 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 16825000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xe34 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 16865000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1b08 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 16905000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xd40 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 16945000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1b0c len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 16985000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1608 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 17025000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x50 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 17065000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x294 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17105000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x554 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 17145000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x224 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 17185000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1308 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 17225000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xa74 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17265000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xdc4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17305000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1c48 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 17345000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x7cc len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 17385000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1da4 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 17425000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1868 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 17465000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1f74 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 17505000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0xd24 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17545000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1e84 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 17585000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1080 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 17625000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xb4 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17665000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x6f0 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17705000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x870 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17745000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1b74 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 17785000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x48 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17825000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xa4c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 17865000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1ec4 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(55) @ 17905000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x43c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(79) @ 17945000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x30c len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 17985000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0xb08 len=0 resp=RESP_OKAY
+# UVM_INFO axi_monitor.sv(55) @ 18025000: uvm_test_top.env.axi_agent.mon [MON_WR] Observed WRITE: addr=0x1464 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 18065000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x19a4 len=0 resp=RESP_SLVERR
+# UVM_INFO axi_monitor.sv(79) @ 18105000: uvm_test_top.env.axi_agent.mon [MON_RD] Observed READ: addr=0x1270 len=0 resp=RESP_SLVERR
+# UVM_INFO C:/questasim64_2021.1/verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 18115000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO mem_checker.sv(32) @ 18115000: uvm_test_top.env.mem_agent.chk [MEM_CHK_SUM] Passive Memory Checker verified 1218 access cycles (0 out-of-bounds violations)
+# UVM_INFO axi_scoreboard.sv(66) @ 18115000: uvm_test_top.env.sb [SB_SUMMARY] ========================================================
+# UVM_INFO axi_scoreboard.sv(67) @ 18115000: uvm_test_top.env.sb [SB_SUMMARY]  Total Writes Checked : 99
+# UVM_INFO axi_scoreboard.sv(68) @ 18115000: uvm_test_top.env.sb [SB_SUMMARY]  Total Reads Checked  : 94
+# UVM_INFO axi_scoreboard.sv(69) @ 18115000: uvm_test_top.env.sb [SB_SUMMARY]  Data Beats Passed    : 551
+# UVM_INFO axi_scoreboard.sv(70) @ 18115000: uvm_test_top.env.sb [SB_SUMMARY]  Data Beats Failed    : 0
+# UVM_INFO axi_scoreboard.sv(71) @ 18115000: uvm_test_top.env.sb [SB_SUMMARY] ========================================================
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  206
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [MEM_CHK_SUM]     1
+# [MON_RD]    94
+# [MON_WR]    99
+# [RNTST]     1
+# [SB_SUMMARY]     6
+# [TEST]     1
+# [TEST_DONE]     1
+# [TEST_TOPOLOGY]     1
+# [TOP]     1
+# [UVMTOP]     1
+# ** Note: $finish    : C:/questasim64_2021.1/verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 18115 ns  Iteration: 62  Instance: /top
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2021.1/verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Stopped at C:/questasim64_2021.1/verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
